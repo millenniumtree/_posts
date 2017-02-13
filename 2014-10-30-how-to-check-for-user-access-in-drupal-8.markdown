@@ -14,3 +14,12 @@ $user = \Drupal::currentUser();
 // Check for permission
 $user->hasPermission('access administration menu');
 ```
+
+You can also do it directly in a twig.
+{% codeblock %}
+{% raw %}
+{% if user.hasPermission('access administration menu') %}
+  <a class="admin-link" href="/secret/page">Secret Page</a>
+{% endif %}
+{% endraw %}
+{% endcodeblock %}
